@@ -20,7 +20,7 @@ class ObjectView: UIView, ThreeDimObjectDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = UIColor.white
         currentShape = ThreeDimObject(points: [])
         currentShape.delegate = self
         currentShape.runTimer()
@@ -68,7 +68,7 @@ class ObjectView: UIView, ThreeDimObjectDelegate {
             UIColor(hue: CGFloat(202.0 / 360.0) + (0.001 * CGFloat(waveNum)), saturation: ((35.0 / 8.0) * CGFloat(waveNum) + 40.0) / 100.0, brightness: 0.8, alpha: (0.82 / 9.0) * (CGFloat(waveNum) + 1.0)).setFill()
             path1.lineWidth = 3.0 / ( (8.0 - CGFloat(waveNum)) / 8.0 * 2.0 + 1.0)
             path1.fill()
-            path1.stroke()
+            //path1.stroke()
             paths.append(path1)
             yHeight = yHeight + 20
             xMod = xMod + 20
